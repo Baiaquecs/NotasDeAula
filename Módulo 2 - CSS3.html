@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Módulo 2 | CSS3</title>
+    <link rel="shortcut icon" href="Arquivos/Images/WhatsApp Image 2021-08-03 at 14.55.23.jpg" type="image/jpg">
+    <style>
+        h3 {
+            margin-bottom: 8px;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>CSS3 - Cascating Style Sheet</h1>
+    <hr>
+    <h2>Maneiras de Utilizar CSS</h2>
+        Há 3 Maneiras De Utilizar CSS, são elas:
+        <ul>
+            <li>Inline Style</li>
+            <li>Internal Style Sheet</li>
+            <li>External Style Sheet (Mais Recomendado)</li>
+        </ul>
+    <hr>
+    <h2>- Inline Style</h2>
+        É uma maneira de formatar arquivos HTML, utilizando o atributo "style" dentro das próprias tags HTML.
+        <ul>
+            <li>Exemplo:</li>
+            <p style=" color: green;" > 
+                &nbsp;Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore repellat delectus, nemo,
+                recusandae nulla fugiat quis natus iusto exercitationem,<br>
+                &nbsp;aut dignissimos fugit illo earum illum nostrum blanditiis est deserunt amet.
+            </p>
+            
+            <p style=" color: red;" > 
+                &nbsp;Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore repellat delectus, nemo,
+                recusandae nulla fugiat quis natus iusto exercitationem,<br>
+                &nbsp;aut dignissimos fugit illo earum illum nostrum blanditiis est deserunt amet.
+            </p>
+        </ul>
+        O <b>principal problema</b> dessa maneira de utilizar CSS é a falta de otimização, visto que se você quiser fazer uma mudança
+        geral, teria que ir de tag em tag.
+        
+    <h2>- Internal Style Sheet</h2>
+        <p>
+            Nessa forma de utilizar CSS, você aplica a tag "Style" no Head da página HTML, e lá aplica as formatações 
+            utilizando a linguagem CSS. <br>
+            Para aplicar a linguagem CSS, utiliza-se os "seletores", que seguem o seguinte padrão: <br>
+        </p>
+        <p><img src="Arquivos/Images/REGRAS-CSS.jpg" alt=""></p>
+
+        <h2>- External Style Sheet</h2>
+        <p>
+            Essa é a forma mais indicada de estilizar o seu arquivo, onde você utiliza a linguagem CSS em outra página e a chama na sua página HTML através da tag
+            <strong>&lt;link rel="stylesheet" type="text/css" href=""&gt;</strong>
+        </p>
+
+    <hr>
+    <h2>Class and ID</h2>
+        <p> Uma outra alternativa aos seletores globais, como "p" ou "h1", que estilizam todas as tags a que eles se referem de maneira padrão, 
+            são as "Classes" (Class) e "Identidades" (ID).
+        </p>
+        <ol>
+            <li>Class</li>
+                <ul type="square">
+                    <li>
+                        Define um padrão que pode ser utilizado mais de uma vez, em diferentes tags.
+                    </li>
+                </ul>
+            <li>Id</li>
+            <ul type="square">
+                <li>
+                    Define um padrão que deve ser utilizado apenas uma vez em todo o código.
+                </li>
+            </ul>
+        </ol>
+        - Para criar uma classe, utiliza-se o mesmo formato dos seletores, com a diferença de iniciar com um ponto. <br>
+        E para chamá-la, basta utilizar a tag "class" e escrever seu nome - não precisa do ponto.
+        <ul>
+            <li>
+                Exemplo:
+            </li>
+                    &nbsp;&nbsp;&nbsp; .exemplo { } <br> <br>
+                    &nbsp;&nbsp;&nbsp; &lt;p class="exemplo"&gt;
+        </ul>
+        - Para criar uma id, também utiliza-se o mesmo formato dos seletores, porém inicia-se com uma hashtag. <br>
+        E para chamá-la, basta utilizar a tag "id" e escrever seu nome - sem a hashtag.
+        <ul>
+            <li>
+                Exemplo:
+            </li>
+                    &nbsp;&nbsp;&nbsp; #exemplo { } <br> <br>
+                    &nbsp;&nbsp;&nbsp; &lt;p id="exemplo"&gt;
+        </ul>
+        <hr>
+    <h2>Div and Span</h2>
+        Essas duas tags são tags que "dividem" ou "separam" áreas do site - e são tags HTML.
+        <ol>
+            <li>
+                Div
+            </li>
+                <ul type="square">
+                    <li>
+                        Divide o site em blocos - é uma tag em bloco (ocupa 100% da largura da região delimitada, logo, duas tags "div" seguidas ficariam uma embaixo da outra no site).
+                    </li>
+                </ul>
+            <li>
+                Span
+            </li>
+                <ul type="square">
+                    <li>
+                        Divide o site apenas na região selecionada - é uma tag in line (duas tags "span" seguidas ficariam uma do lado da outra, na mesma linha, no site, como em um texto)
+                    </li>
+                </ul>
+        </ol>
+        
+        - Uma Div utiliza-se da seguinte forma:
+        <ul>
+            <li>
+                Exemplo:
+            </li>
+                &nbsp;&nbsp;&nbsp; &lt;div&gt;Texto 1&lt;/div&gt; &nbsp;&nbsp; &lt;div&gt;Texto 2&lt;/div&gt;&nbsp;&nbsp; gerará: <br> <br>
+                <ul><div>Texto 1</div> <div>Texto 2</div></ul>
+        </ul>
+        
+        - Já uma Span, utiliza-se da seguinte forma:
+        <ul>
+            <li>
+                Exemplo:
+            </li>
+                &nbsp;&nbsp;&nbsp; &lt;span&gt;Texto 1&lt;/span&gt; &nbsp;&nbsp; &lt;span&gt;Texto 2&lt;/span&gt; gerará: <br><br>
+                <ul><span>Texto 1</span> <span>Texto 2</span></ul>
+        </ul>
+
+    <hr>
+    <h2>Border</h2>
+        É uma propriedade CSS que define bordas para a área desejada. Os principais atributos das bordas, são:
+        <ul>
+            <li>border-color</li>
+            <li>border-width</li>
+            <li>border-style</li>
+        </ul>
+        Os principais border-style são:
+        <ul type="square">
+            <li>solid, dotted, dashed, outset</li>
+        </ul>
+    
+    <hr>
+    <h2>Font</h2>
+        <h3 style="margin-top: 0px; margin-bottom: 8px;">Font-family</h3>
+        Font-family é um atributo que define o estilo da fonte em si. Um ótimo site para utilização de fontes seguras e comuns a maioria dos usuários, usa-se o site:
+        <a href="https://www.w3schools.com/css/css_font.asp">w3schools.com</a><br><br>
+        Utiliza-se essa sintaxe para esse atributo em CSS: <br>
+        <ul>
+            <li>
+                { 
+                    font-family: "family-name", generic-family, initial|inherit;
+                }
+            </li>
+        </ul>
+        O Browser tentará utilizar as primeiras fontes específicas, e caso elas não estejam disponíveis no navegador, é sempre importante deixar uma fonte genérica. Ele lerá as fontes pela ordem que estiverem colocadas.
+
+        <h3>Font-size</h3>
+        É um atributo CSS que define o tamanho das fontes. Suas principais unidades de medida são:
+        <ul>
+            <li>px: é um tamanho fixo, em pixels</li>
+            <li>%: é um tamanho relativo a janela do browser</li>
+            <li>em: é um tamanho relativo ao container pai</li>
+        </ul>
+
+        <h3>Font-weight</h3>
+        Atributo CSS que define o "peso" da fonte, o quão "grossa" ou "forte" ela será - muito utilizada para deixar o texto em negrito, por exemplo. <br>
+        Exemplo:
+        <ul>
+            <li>font-weight: bold = <span style="font-weight: bold;">texto em negrito</span></li>
+            <li>font-weight: normal = <span style="font-weight: normal;">texto normal</span></li>
+        </ul>
+        Ainda há a opção de font-weight que varia de 100 à 900, que altera o quão negrito o texto fica.
+        Exemplo:
+        <ul>
+            <li>font-weight: 100 = <span style="font-weight: 100;">texto em weight 100</span> </li>
+            <li>font-weight: 900 = <span style="font-weight: 900;">texto em weight 900</span></li>
+        </ul>
+
+        <h3>Font-style</h3>
+        Esse atributo define alguns estilos de texto, como:
+        <ul>
+            <li>Italic: <span style="font-style: italic;">O texto fica em itálico</span></li>
+            <li>Oblique: <span style="font-style: oblique;">É praticamente um itálico com outro nome</span></li>
+            <li>Normal: <span style="font-style: normal;">O texto fica normal</span></li>
+        </ul>
+
+        <h3>Text-decoration</h3>
+        Esse atributo CSS define algumas decorações para os textos. São elas:
+        <ul>
+            <li>Underline: <span style="text-decoration: underline;">Define uma linha abaixo do texto</span></li>
+            <li>Line-through: <span style="text-decoration: line-through;">Define uma linha no meio do texto</span></li>
+            <li>Overline: <span style="text-decoration: overline;">Define uma linha acima do texto</span></li>
+        </ul>
+
+        <h3>Font</h3>
+        <p>Nós podemos utilizar todos essas configurações de uma única vez apenas com o atributo Font - porém não acho que seja bom, pois fica desorganizado.</p>
+
+    <hr>
+    <h2>Background</h2>
+    Essa propriedade CSS define as características do plano de fundo do container. E alguns atributos são utilizados para definir suas características.
+
+        <h3>Background-color</h3>
+        Esse atributo altera a cor do plano de fundo. Por exemplo:
+        <ul>
+            <li style="background-color: blue;">Plano de fundo azul</li>
+            <li style="background-color: red;">Plano de fundo vermelho</li>
+        </ul>
+
+        <h3>Background-image</h3>
+        Esse atributo CSS define uma imagem como plano de fundo, ou seja, que permanece "atrás" de todo conteúdo.
+
+        <h3>Background-repeat</h3>
+        Esse atributo define a forma como a "Background-Image" se repete no browser. Seus principais valores são:
+        <ul>
+            <li>background-repeat: no-repeat = imagem só aparece uma vez;</li>
+            <li>background-repeat: repeat-x = imagem se repete continuamente na horizontal;</li>
+            <li>background-repeat: repeat-y = imagem se repete continuamente na vertical;</li>
+            <li>background-repeat: repeat = imagem se repete tanto na vertical quanto na horizontal.</li>
+        </ul>
+
+        <h3>Background-attachment</h3>
+        Esse atributo CSS define a maneira como a imagem irá se comportar quando a página do navegador for rolada para baixo. Seus valores são:
+        <ul>
+            <li>background-attachment: fixed = imagem permanece "fixa" no navegador - sua posição não muda quando a página é rolada para baixo, ou seja, a imagem aparece sempre;</li>
+            <li>background-attachment: scroll = imagem permanece com uma posição fixa na página, e não no navegador - quando a página é rolada para baixo, a imagem "some".</li>
+        </ul>
+
+        <h3>Background-position</h3>
+        É um atributo CSS que alinha a imagem do background de acordo com as instruções. Ele pode receber dois valores, que são:
+        <ul>
+            <li>Primeiro valor: left ou center ou right - define sua posição no eixo horizontal;</li>
+            <li>Segundo valor: top ou center ou bottom - define sua posição no eixo vertical.</li>
+        </ul>
+
+        <h3>OBS</h3>
+        <ul type="square">
+            <li>Essas propriedades são aplicadas de acordo com o container em que a imagem for inserida como background;</li>
+            <li>Assim como em Font, todas essas configurações podem ser aplicadas de uma única vez apenas com a propriedade "Background" - mas fica desorganizado;</li>
+            <li>É possível utilizar uma <span style="color: blue;">cor de fundo</span> e uma <span style="color: red;">imagem</span> como Background ao <span style="color: green;">mesmo tempo!</span></li>
+        </ul>
+    
+    <hr>
+    <h2>Modelo de Caixa</h2>
+        <div>
+            <p>
+                Os elementos HTML se comportam como se estivessem em "caixas", que podem ser do tipo inline, block ou inline-block - o que será explicado mais a frente. <br>
+                Esse comportamento faz com que seja possível delimitar:
+            </p>
+            <ul>
+                <li>Padding: Espaçamento interno, entre o conteúdo e a "caixa";</li>
+                <li>Margin: Espaçamento externo, entre a "caixa" e outros elementos.</li>
+            </ul>
+            <div style="margin-left: 10px;">
+                <img src="arquivos/Images/Box Model.png" alt="">
+            </div>
+            <p>
+                Essas duas propriedades podem ser ajustadas conforme a necessidade, utilizando "-left", "-right", "-top" ou "-bottom", logo após elas. <br>
+                Pode-se também ajustá-las fornecendo 2 ou 4 valores:
+            </p>
+            <ul>
+                <li>2 valores: o primeiro refere-se aos espaçamentos horizontais (right and left) e o segundo aos espaçamentos verticais (top and bottom);</li>
+                <li>4 valores: eles alteram os espaçamentos nos 4 cantos da "caixa", começando no topo e seguindo o sentido horário.</li>
+            </ul>
+            <h3>Margin-Collapse</h3>
+            Esse é um <span style="color: blue;">comportamento</span> que vale a pena destacar:
+            <ul>
+                <li>Quando nós temos dois elementos ("caixas") que estão perto um do outro e há margens que os separam, os valores não são somados, eles se sobrepõem, permanecendo a margem maior os separando.</li>
+            </ul>
+            <h3>OBS</h3>
+            <p>Vale a pena se atentar ao fato de alguns seletores já possuírem margin pré-definidos, como os heading. Por isso é bom, ao inicar um projeto, utilizar o seletor universal " * " para zerar essas formatações padrão.</p>
+        </div>
+
+    <hr>
+    <h2>Elementos Flutuantes</h2>
+        <h3>Float</h3>
+        <p>
+            É um atributo CSS que cria um novo "fluxo flutuante" na página: literalmente faz o container flutuar. Essa propriedade é muito útil, mas deve-se tomar cuidado devido a alguns comportamentos que ela tem e causa na página e nos outros elementos. <br>
+            Ela é muito utilizada para "alinhar" os containeres e/ou alterar sua posição. O float tem dois valores:
+        </p>
+        <ul>
+            <li>right: faz com que os elementos flutuem à direita;</li>
+            <li>left: faz com que os elementos flutuem à esquerda.</li>
+        </ul>
+        Alguns comportamentos dos elementos com float:
+        <ul>
+            <li>Se dois elementos estão no mesmo cointainer e os dois estão com float, eles se alinhem segundo a ordem de chamada (quem vem primeiro no código, é o 1°);</li>
+            <li><em>À priori</em>os elementos flutuantes se alinham conforme o espaço no browser - diminuir ou aumentar a janela do browser pode alterar a posição aparente do elemento;</li>
+            <li>Os elementos fora do fluxo flutuante se comportam como se os elementos flutuantes não existissem - eis a importância da propriedade "clear";</li>
+            <li>Devido ao comportamento acima, os cointaineres a que os elementos flutuantes pertencem não se expandem para que eles "caibam" - mais uma vez a importância do "clear";</li>
+            <li>O elemento flutuante sempre tenta se alinhar o mais a direita ou a esquerda possível - é importante se atentar ao tamanho dos cointaineres</li>
+        </ul>
+
+        <h3>Clear</h3>
+        <p>
+            Esse atributo CSS faz com que o elemento "limpe" o fluxo flutuante - o elemento passa a "reconhecer" a existência do elemento flutuante e "joga" o container para baixo desses 
+            elementos - por isso é muito importante para a estética da página. <br>
+            Ele possui 4 valores, que são:
+        </p>
+        <ul>
+            <li>none: não altera nada;</li>
+            <li>right: limpa o fluxo flutuante à direita;</li>
+            <li>left: limpa o fluxo flutuante à esquerda;</li>
+            <li>both: limpa o fluxo flutuante à direita e à esquerda.</li>
+        </ul>
+
+        <h3>OBS</h3>
+        <p>Para utilizar background com elementos flutuantes, por exemplo, deve-se:</p>
+        <ol>
+            <li>Criar uma div principal;</li>
+            <li>Definir o background;</li>
+            <li>Colocar os elementos flutuantes em divs dentro da div principal</li>
+            <li>Utilizar o atributo clear dentro da div principal - pode ser em uma outra div apenas com uma classe ".clear", por exemplo.</li>
+        </ol>
+    
+    <hr>
+    <h2>Elementos block, inline e inline-block</h2>
+        <p>Os elementos HTML se comportam de maneira a definirem 3 grandes grupos, que são eles:</p>
+        <ul>
+            <li>Elementos Block;</li>
+            <li>Elementos Inline;</li>
+            <li>Elementos Inline-Block.</li>
+        </ul>
+
+        <h3>Elementos Block</h3>
+            <p>
+                Os elementos do tipo Block são elementos que possuem uma largura - <span style="color: red;">WIDTH</span> - que ocupa todo o espaço da janela do browser. <br>
+                Devido a esse comportamento, dois elementos Block chamados em sequência são posicionados um abaixo do outro. Exemplos desse tipo de elemento são:
+            </p>
+            <ul>
+                <li>&lt;h1&gt;</li>
+                <li>&lt;p&gt;</li>
+                <li>&lt;table&gt;</li>
+            </ul>
+
+        <h3>Elementos Inline</h3>
+        <p>
+            Os elementos do tipo Inline possuem a largura de acordo com o tamanho do seu conteúdo. Diferentemente dos elementos Block, se dois elementos Inline forem chamados em sequência, eles serão
+            posicionados na mesma linha - se houver espaço. Exemplos de Elementos Inline:
+        </p>
+        <ul>
+            <li>&lt;a&gt;</li>
+            <li>&lt;span&gt;</li>
+            <li>&lt;img&gt;</li>
+        </ul>
+
+        <h3>Elementos Inline-Block</h3>
+        <p>
+            Os elementos Inline-Block possuem a largura de acordo com o tamanho do seu conteúdo - assim como os elementos Inline - mas, se dois elementos Inline-Block forem chamados em sequência e o segundo
+            não couber por inteiro na linha, eles ficarão um embaixo do outro - como os elementos Block. Pode-se utilizá-los com o atributo:
+        </p>
+
+        <h3>OBS</h3>
+        <p>Pode-se alterar essas configurações dos elementos utilizando o atributo "display":</p>
+        <ul>
+            <li>display: block</li>
+            <li>display: inline</li>
+            <li>display: inline-block</li>
+        </ul>
+
+    <hr>
+    <h2>Position</h2>
+        <p>Esse atributo CSS define a forma como o atributo irá se posicionar na janela do browser e também o local. Pode receber quatro valores:</p>
+        <ul>
+            <li>static;</li>
+            <li>relative;</li>
+            <li>absolute;</li>
+            <li>fixed.</li>
+        </ul>
+        
+        <h3>Static</h3>
+        <p>O posicionamento Static é o padrão já aplicado a todos os elementos em HTML.</p>
+
+        <h3>Relative <span style="font-size: 0.8em; font-weight: normal;"> - de acordo com a posição original</span></h3>
+        <p>
+            O posicionamento Relative utiliza propriedades de deslocamento, para posicionar o objeto de acordo com a sua posição "original". Assim como com o Static, com o posicionamento Relative, o elemento sobe 
+            a medida que a página é rolada para baixo. Aos atributos para deslocamento definem-se valores que "afastam" o container da sua posição original, e os mais utilizados são (para valores positivos):
+        </p>
+        <ul>
+            <li>top: desloca o elemento para baixo;</li>
+            <li>bottom: desloca o elemento para cima;</li>
+            <li>right: desloca o elemento para esquerda;</li>
+            <li>left: desloca o elemento para direita;</li>
+        </ul>
+        <p>Se nenhum valor for atribuído a esses atributos, o elemento permanece na posição "original".</p>
+
+        <h3>Absolute <span style="font-size: 0.8em;font-weight: normal;"> - de acordo com o coitainer em que está inserido, se o coitainer possuir algum valor de posição</span></h3>
+        <p>
+            Com o posicionamento Absolute, o container sai do fluxo padrão do documento - parecido com um Elemento Flutuante -, se sobrepoõe aos outros elementos e a sua posição é defina com os mesmos atributos de deslocamento,
+            porém, eles deslocam o objeto de acordo com o container em que o elemento está inserido, se ele tiver uma posição diferente da Static - senão ele usará o body como padrão. São utilizados os mesmos atributos que 
+            no Relative, mas que leva a um comportamento diferente, que são (para valores positivos):
+        </p>
+        <ul>
+            <li>top: afasta o elemento do topo do container;</li>
+            <li>bottom: afasta o elemento do canto inferior do container;</li>
+            <li>right: afasta o elemento do canto direito do container;</li>
+            <li>left: afasta o elemento do canto esquerdo do container.</li>
+        </ul>
+        <p>O elemento sobe a medida que a página é rolada para baixo.</p>
+
+        <h3>Fixed <span style="font-size: 0.8em;font-weight: normal;"> - fixo em relação a janela do navegador</span></h3>
+        <p>
+            O posicionamento Fixed utiliza como padrão a janela do browser e mantém o elemento fixo à ela - aparecendo mesmo se a página for rolada para baixo. Ele utiliza os mesmos atributos de posicionamento que o Absolute, porém sempre
+            em relação ao &lt;body&gt;:
+        </p>
+        <ul>
+            <li>top: afasta o elemento do topo do body;</li>
+            <li>bottom: afasta o elemento do canto inferior do body;</li>
+            <li>right: afasta o elemento do canto direito do body;</li>
+            <li>left: afasta o elemento do canto esquerdo do body.</li>
+        </ul>
+    
+    <hr>
+    <h2>Sobreposição de Elementos</h2>
+    <p>Ao utilizar as propriedades de posicionamento (Position: Relative, Absolute, Fixed) pode ocorrer que algum elemento se sobreponha a outros. Para definir, então qual elemento aparece primeiro em uma posição, utiliz-se a propriedade CSS:
+    </p>
+    <ul>
+        <li>z-index: quanto maior o número atribuído, mas a frente aparece o elemento.</li>
+    </ul>
+    <p>Se for atribuído o mesmo valor a mais de um elemento, a sobreposição segue a ordem de chamada do código: os elementos que foram escritos primeiros ficam mais abaixo.</p>
+    
+    <hr>
+    <h2>Formatação de Links</h2>
+        <p>
+            Para estilizar links do CSS, pode-se utilizar 4 atributos, que alteram o tipo de link que será estilizado. São eles:
+        </p>
+        <ul>
+            <li>a:link = define links que ainda não foram visitados pelo usuário;</li>
+            <li>a:visited = define links que já foram visitados pelo usuário;</li>
+            <li>a:hover = define links com o cursor do mouse em cima;</li>
+            <li>a:active = define links no momento em que são clicados pelo usuário.</li>
+        </ul>
+    
+    <hr>
+    <h1>Módulo Concluído!</h1>
+</body>
+</html>

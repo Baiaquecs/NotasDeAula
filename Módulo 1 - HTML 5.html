@@ -1,0 +1,198 @@
+<!doctype html>
+<html>
+	<head> <!--A tag "head" não é necessária no HTML 5, mas usa-se por organização do código -->
+
+		<meta charset="utf-8"> 
+			<!-- Esse código serve para permitir a utilização de assentos nos caracteres (e isso aqui é um comentário) -->
+			<!-- A tag "meta" nesse caso é uma tag "selfclose", ou seja, fecha automaticamente, por si mesmo-->
+
+		<title> Módulo 1 | HTML 5 </title>
+		<link rel="shortcut icon" href="Arquivos/Images/WhatsApp Image 2021-08-03 at 14.55.23.jpg" type="image/jpg">
+	</head>	
+	<body>
+		<h1>HTML - HyperText Markup Language</h1>
+		<!-- As headlines (cabeçalhos) vão do 1 ao 6. (Seja criativo.)-->
+		<h1> Primeira Headline </h1>
+			Élida Lima feitosa é uma menina muito linda e cheirosa. (Também tem uma bunda linda, mas ela não goste que eu fale)
+
+		<h2> Segunda Headline </h2>
+			Eu a amo muito.
+
+		<!--Para pular para a próxima linha, sem um espaçamento entre elas, use a tag <br> (break)-->
+		<h2> Teste do Break </h2>
+			Essa frase para aqui e <br>
+			continua daqui.
+		
+		<!-- Para agrupar os textos em parágrafos use a tag <p>, que quebra o texto e dá um espaço entre ele e a próxima linha.-->
+		<h2> Teste do Parágrafo "p" </h2>
+			<p> A tag do parágrafo quebra o texto e deixa um espaço entre ele e a próxima linha. É uma tag muito autointuitiva. </p>
+			<p>	Eu agora estou escrevendo depois de ter usado a tag do parágrafo. Perceba o espaçamento entre as linhas. </p>
+
+		<!-- Para gerar uma linha no meio da página, use a tag <hr> (Horizontal Rule)-->
+
+		<hr>
+		<h2> Tags Para Formatação </h2>
+			<p> <b>Para</b> um texto em <strong>negrito</strong> use essas duas tags. </p>
+			<!--A tag <b> vem de Bold (Negrito em inglês)-->
+
+			<p> <i>Para</i> um texto em <em>itálico</em> use essas duas tags. </p>
+			<!--A tag <em> vem de Emphasis (Ênfase em inglês)-->
+
+			<p> Para um texto com <u>underline</u> use essa única tag. </p>
+
+			<p> Para um texto com um <strike>traço</strike> use essa única tag. </p>
+
+		<hr>
+		<h2> Listas não ordenadas e ordenadas </h2>
+			<h3>Lista não ordenada:</h3>
+			<!--Para as Unordered List, usa-se a tag <ul>, com a tag <li> (listem item) para agrupar os itens dessa lista.-->	
+			Primeiro exemplo:
+				<ul>
+					<li>Item 1</li>
+					<li>Item 2</li>
+					<li>Item 3</li>
+				</ul>
+			<!--As listas não ordenadas também podem ser editadas com 3 atributos de type, que são: circle, square e disc (padrão).-->
+			Segundo exemplo:
+				<ul type="circle">
+					<li>Item 1</li>
+					<li>Item 2</li>
+					<li>Item 3</li>
+				</ul>
+
+			<h3>Lista ordenada:</h3>
+			<!--Para as Ordered List, usa-se a tag <ol>, com a tag <li> (listem item) para agrupar os itens dessa lista.-->
+			Primeiro exemplo:
+				<ol>
+					<li>Item 1</li>
+					<li>Item 2</li>
+					<li>Item 3</li>
+				</ol>
+			<!--As listas ordenadas também podem ser editadas com 5 atributos de type, que são: 1 (padrão), A, a, I (algarismos romanos maiúsculos), i (algarismos romanos minúsculos)-->
+			Segundo Exemplo:
+				<ol type="a">
+					<li>Item 1</li>
+					<li>Item 2</li>
+					<li>Item 3</li>
+				</ol>
+
+		<hr>
+		<h2>Imagens</h2>
+			<p>Para utilizar imagens, usa-se a tag "img" e com o atributo "src" você localiza a imagem em uma pasta dentro de seu projeto ou em um link URL.</p>
+			<ul type="disc">
+				<li>Primeiro Exemplo - Foto Em Link URL</li>
+				<p>
+				<img src="https://generationiron.com/wp-content/uploads/2021/02/header-1-6-1024x543.jpg" width="500">
+				<p>
+
+				<li>Segundo Exemplo - Foto Salva Em Pasta Dentro Do Projeto</li>
+				<p>
+				<img src="Arquivos/Images/CBUMDB.jpg" width="500">
+
+				<!--Pode-se usar os atributos "width" (largura) e/ou "height" (altura) para ajustar o tamanho da imagem.(Usar apenas um mantém a proporção das imagens)-->
+			</ul>
+
+		<hr>
+		<h2>Criação de Links Entre Páginas</h2>
+			Para criar links entre páginas (ou arquivos html) usa-se a tag "a" (anchor, ou ancorar, em Português), junto com o atributo "href" (hiperlink reference, ou hiperlink de referência.<br>
+			Para o primeiro exemplo, criarei um link abaixo que leva à pagina do 1° Exercício do Curso:
+			
+			<ul type="square">
+				<li> <a href="1° Exercício.html">Vá para o 1° Exercício do Curso</a> </li>
+			</ul>
+
+		<!--Pode-se linkar páginas que estão dentro de outras pastas, mas é necessário escrever o caminho, assim como para as imagens.
+			Para um menu, posso por um link para a mesma página, mas deixar o "href" vazio.-->
+
+		<hr>
+		<h2>Criação de Tabelas</h2>
+			Para criar tabelas, utiliza-se a tag "table" para iniciar a estrutura, em seguida utiliza-se a tag "tr" (table row, ou linha da tabela) para abrir as linhas e, dentro dela, utiliza-se a tag "td" (table data, ou dados da tabela), que formam as colunas referentes a linha da tabela, com os dados dentros.
+			Para destacar os "títulos" da tabela, utiliza-se a tag "th" (table header) ao invés de "td"!
+			<ul type="disc">
+				<li>Exemplo:</li>
+				<p>
+					<table border="2" width="300">
+						<tr> <th>Produtos</th> 	<th>Código</th>  <th>Preço</th> 	 </tr>
+						<tr> <td>Notebook</td> 	<td>001</td>	 <td> 4.999,00 </td> </tr>
+						<tr> <td>Celular</td> 	<td>002</td> 	 <td> 3.499,00</td>  </tr>
+					</table>
+					</p>
+			</ul>
+			Para mesclar as células de uma tabela, pode-se utilizar dois atributos:
+				<ul type="square">
+					<li>Colspan (Extensão de coluna): Mescla Colunas</li>
+					<li>Rowspan (Extensão de linha): Mescla Linhas</li>
+					<p><ul type="disc">
+						<li>Exemplo:</li>
+						<p>
+							<table border="2" width="200">
+								<tr>
+									<th rowspan="2">Desconto</th>
+									<td> Cupom 1 </td>
+								</tr>
+								
+								<tr>
+									<td>Cupom 2</td>
+								</tr>
+							</table>
+							</p>
+					</ul></p>
+				</ul>
+
+		<hr>
+		<h2>Criação de Formulários</h2>
+		Para criar formulários, utiliza-se a tag "form", e você pode usar a tag "input" para criar os botões ou campos de texto, para colocar as informações.
+
+		<ul type="disc">
+			<li>Exemplo:</li><p>
+			<form action="">
+				Login <br>
+				<input type="text" name="login"> <p>
+	
+				Senha <br>
+				<input type="password" name="senha"> <p>
+	
+				<input type="submit" value="Logar">
+				<!--Esse botão é para enviar os formulários para a página destino, que é definida no atributo"Action" do formulário-->
+			</form>
+		</ul>
+		<h3>Outros Componentes de Formulários</h3>
+			<ul>
+				<form action="">
+					<li>Botão Para Uma Escolha ("Radio")</li>
+						&nbsp; Escolha o sexo: <br>
+							&nbsp;&nbsp;&nbsp; <input type="radio" name="botão" > Masculino <br>
+							&nbsp;&nbsp;&nbsp; <input type="radio" name="botão" > Feminino <br>
+							&nbsp;&nbsp;&nbsp; <input type="radio" name="botão" > Outros <br><br>
+
+					<li>Botão Para Múltiplas Escolhas ("Checkbox")</li>
+						&nbsp; Diga os cursos que você tem interesse: <br>
+							&nbsp;&nbsp;&nbsp; <input type="checkbox" name="cursos" id=""> Agronomia <br>
+							&nbsp;&nbsp;&nbsp; <input type="checkbox" name="cursos" id=""> Direito <br>
+							&nbsp;&nbsp;&nbsp; <input type="checkbox" name="cursos" id=""> Engenharia <br>
+							&nbsp;&nbsp;&nbsp; <input type="checkbox" name="cursos" id=""> Medicina <br><br>
+
+					<li>Componente Para Uma Escolha Com Muitas Opções ("Select")</li>
+						&nbsp; Diga o seu Estado: <br>
+						&nbsp;&nbsp;&nbsp; 
+							<select name="estado" id="">
+								<option value="ac">Acre</option>
+								<option value="am">Amazonas</option>
+								<option value="mg">Minas Gerais</option>
+								<option value="rj">Rio de Janeiro</option>
+								<option value="sp">São Paulo</option>	
+							</select> <br><br>
+
+					<li>Caixa Para Texto ("Textarea"):</li>
+						&nbsp; Escreva abaixo suas obersvações: <br>
+							&nbsp;&nbsp;&nbsp; <textarea name="texto" id="" cols="45" rows="5"></textarea> <br><br>
+					
+					<li>Botão Para Enviar O Formulário Acima ("Submit")</li>
+						&nbsp; Clique no botão abaixo para enviar seu formulário. <br>
+							&nbsp;&nbsp;&nbsp; <input type="submit" value="Enviar">
+				</form>
+			</ul>
+		<hr>
+		<h1>Módulo Concluído!</h1>
+	</body>
+</html>
