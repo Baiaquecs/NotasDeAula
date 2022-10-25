@@ -6,6 +6,142 @@
     <link rel="shortcut icon" href="Arquivos/Images/WhatsApp Image 2021-08-03 at 14.55.23.jpg" type="image/jpg">
 </head>
 <body>
+    <h1>CSS3 | Intermediário e Avançado</h1>
+    <hr>
+    <h2>SELETORES</h2>
+    <p>
+        Os seletores ditam, na linguagem CSS, quem irá receber as instruções que foram dadas. Eles seguem o seu nome: SELECIONAM 
+        quem será estilizado. Já vimos sobre seletores no módulo passado, como os seletores de texto h1, h2 e h3 mas agora falaremos 
+        mais a fundo. 
+    </p>
+        <h3>Seletor Universal *</h3>
+        <p>
+            O Seletor Universal, representado por <span>*{}</span>, atribui as suas regras a TODAS as tags HTML da página. É muito
+            utilizado para zerar o MARGIN e PADDING.
+        </p>
+
+        <h3>Seletores de Texto (ou tag)</h3>
+        <p>
+            Os Seletores de Texto aplicam as suas regras pelo tipo de tag: assim, todos os elementos com a tag selecionada serão 
+            estilizados.
+        </p>
+        Exemplo:
+        <ul>
+            <li>h1{}: seleciona todas as tags "h1" da página.</li>
+            <li>p{}: seleciona todas as tags "p" da página.</li>
+            <li>div{}: seleciona todas as tags "div" da página.</li>
+        </ul>
+
+        <h3>Seletores de Classe</h3>
+        <p>
+            Os Seletores de Classe atribuem suas regras apenas aos elementos que possuem a class a que ele se refere. Esses seletores
+            são identificados por sempre começarem com "." .
+        </p>
+        Exemplo:
+        <ul>
+            <li>.azul {}: seleciona todas as tags com a <span style="color: orange;">class=</span><span style="color: rgb(30, 228, 119);">"azul"</span>.</li>
+            <li>p.menu {}: seleciona apenas as tags "p" com a <span style="color: orange;">class=</span><span style="color: rgb(30, 228, 119);">"menu"</span>.</li>
+            <li>h2.post {}: seleciona apenas as tags "h2" com a <span style="color: orange;">class=</span><span style="color: rgb(30, 228, 119);">"post"</span>.</li>
+        </ul>
+        <p>
+            Observe que, apesar de na linguagem CSS, esses seletores serem identificados com o "." no início, o "." não precisa ser
+            inserido no atributo "class" na linguagem HTML. <br>
+            É também importante citar a possibilidade de especificar a que tipo de seletores de texto a class se refere - a colocando
+            antes do "." -, visto que uma class pode ser utilizada infinitas vezes numa página HTML.
+        </p>
+        
+        <h3>Seletor de Identidade</h3>
+        <p>
+            Os Seletores de Identidade atribuem suas regras apenas ao elemento com a ID a que ele se refere. Esses selotores são
+            identicados por sempre começarem com "#".
+        </p>
+        Exemplo:
+        <ul>
+            <li>#logo {}: seleciona a tag com a <span style="color: orange;">id=</span><span style="color: rgb(30, 228, 119);">"logo"</span></li>
+            <li>#rodape {}: seleciona a tag com a <span style="color: orange;">id=</span><span style="color: rgb(30, 228, 119);">"rodape"</span></li>
+            <li>#pagina p {}: seleciona apenas os paragrafos dentro da tag com a <span style="color: orange;">id=</span><span style="color: rgb(30, 228, 119);">"pagina"</span></li>
+        </ul>
+        <p>
+            De maneira igual aos seletores de classe, a "#" não precisa ser inserida no atributo "id" na linguagem HTML. O atributo ID 
+            deve ser utilizado em apenas uma tag em toda a página HTML.
+        </p>
+
+        <h3>Seletor de Filho</h3>
+        <p>
+            Os Seletores de Filho selecionam apenas os elementos que são filhos (que estão IMEDIATAMENTE dentro) de outro elemento. Uma
+            tag é filha da tag que está IMEDIATAMENTE "fora" dela. O símbolo que os representa é ">", mas há uma maneira especial de
+            utilizá-lo. 
+        </p>
+        Exemplo:
+        <ul>
+            <li>li>a {}: seleciona apenas as tag "a" que estão IMEDIATAMENTE dentro de uma tag "li".</li>
+            <li>div>p {}: seleciona apenas as tag "p" que estão IMEDIATAMENTE dentro de uma tag "div".</li>
+            <li>div>h2{}: seleciona as tag "h2" que estão IMEDIATAMENTE dentro de uma tag "div".</li>
+        </ul>
+        <p>
+            É importante frizar o "IMEDIATAMENTE dentro" porque o filho de uma tag são as tags que se abrem em sequência à ele. As
+            tags dentro de uma tag filho, não são filhos do elemento principal.
+        </p>
+        
+        <h3>Seletor de Descendente</h3>
+        <p>
+            Já os Seletores de Descendente selecionam todas as tags dentro deles, todos os seus "descentendes", e não apenas o "filho".
+            Para identificar esses seletores, basta colocar a tag principal adicionar um espaço e, em seguida, a tag descendente.
+        </p>
+        Exemplo:
+        <ul>
+            <li>p a {}: seleciona todas as tag "a" que estejam dentro de "p", sendo ou não filho direto.</li>
+        </ul>
+
+        <h3>Seletor de Irmão Adjacente</h3>
+        <p>
+            Seleciona o elemento irmão que vem IMEDIATAMENTE após o principal. É caracterizado pelo símbolo "+".
+        </p>
+        Exemplo:
+        <ul>
+            <li>h1+p {}: seleciona a primeira tag "p" depois de uma tag "h1".</li>
+        </ul>
+
+        <h3>Seletor de Irmão Geral</h3>
+        <p>
+            Seleciona todos os elementos que são irmãos do principal - que venham depois dele-, não apenas a imediatamente após.
+        </p>
+        Exemplo:
+        <ul>
+            <li>h1~p {}: seleciona todas as tags "p" irmãs de "h1" - ou seja, que vem após a tag "h1".</li>
+        </ul>
     
+    <hr>
+    <h2>Herança e Especificidade</h2>
+    <p>
+        São dois conceitos intrísecos ao CSS, muito importantes para entender o funcionamento da
+        linguagem.
+    </p>
+        <h3>Herança</h3>
+        <p>
+            O conceito de herança rege o comportamento de alguns elementos de herdar algumas regras atribuídas aos elementos externos 
+            a eles. Um exemplo é a propriedade "color" no seletor "body", que atribui a cor escolhida a todos os elementos dentro do 
+            "body".
+        </p>
+
+        <h3>Especificidade</h3>
+        <p>
+            Já o comportamento de especificidade rege a ordem na qual as regras serão aplicadas. Os seletores possuem uma precedência 
+            que define quais regras serão aplicadas primeiro. <br>
+            Em um caso, por exemplo, de dois seletores iguais, as regras do último escrito (o mais abaixo) é que será aplicado, COM 
+            EXCEÇÃO no caso da utilização do atributo CSS "!important" que define o seletor selecionado como de alta prioridade - mas 
+            deve-se utilizá-lo com caltela.
+        </p>
+        <p>
+            Há também o caso da utilização de um seletor mais específico, como um seletor "p", que altera as cores dos parágrafos, 
+            mesmo com uma cor já atribuída ao body. Um seletor mais específico terá precedência sobra um seletor mais geral. Um seletor
+            de identidade (id), por exemplo, sempre terá prioridade em relação a um seletor de classe (class), por exemplo.
+        </p>
+    
+    <hr>
+    <h2>Barra de Navegação Vertical</h2>
+    <p>
+        O conceito de criação de barra de navegação envolve a manipulação de "ul". 
+    </p>
 </body>
 </html>
